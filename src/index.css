@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Refined light surfaces used throughout the portal */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #e2e8f0;
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(168, 85, 247, 0.15);
+}
+
+/* Legacy dark utility classes are deliberately softened here so every route,
+   including forms, reports and ledger panels, follows the light design system. */
+.light-theme .bg-slate-900,
+.light-theme .bg-slate-900\/20,
+.light-theme .bg-slate-900\/40,
+.light-theme .bg-slate-900\/60,
+.light-theme .bg-slate-950,
+.light-theme .bg-slate-950\/20,
+.light-theme .bg-slate-950\/40,
+.light-theme .bg-slate-950\/50,
+.light-theme .bg-slate-950\/60,
+.light-theme .bg-slate-950\/80 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.light-theme .border-white\/5,
+.light-theme .border-white\/10,
+.light-theme .border-white\/20 {
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme .bg-slate-900 .text-white,
+.light-theme .bg-slate-900\/20 .text-white,
+.light-theme .bg-slate-900\/40 .text-white,
+.light-theme .bg-slate-900\/60 .text-white,
+.light-theme .bg-slate-950 .text-white,
+.light-theme .bg-slate-950\/20 .text-white,
+.light-theme .bg-slate-950\/40 .text-white,
+.light-theme .bg-slate-950\/50 .text-white,
+.light-theme .bg-slate-950\/60 .text-white,
+.light-theme .bg-slate-950\/80 .text-white {
+  color: #1e293b !important;
+}
+
+.light-theme .bg-slate-900.text-white,
+.light-theme .bg-slate-900\/20.text-white,
+.light-theme .bg-slate-900\/40.text-white,
+.light-theme .bg-slate-900\/60.text-white,
+.light-theme .bg-slate-950.text-white,
+.light-theme .bg-slate-950\/20.text-white,
+.light-theme .bg-slate-950\/40.text-white,
+.light-theme .bg-slate-950\/50.text-white,
+.light-theme .bg-slate-950\/60.text-white,
+.light-theme .bg-slate-950\/80.text-white {
+  color: #1e293b !important;
+}
+
+.light-theme .bg-slate-900 .text-slate-400,
+.light-theme .bg-slate-900\/40 .text-slate-400,
+.light-theme .bg-slate-950 .text-slate-400,
+.light-theme .bg-slate-950\/40 .text-slate-400,
+.light-theme .bg-slate-950\/80 .text-slate-400 {
+  color: #64748b !important;
+}
+
+.light-theme .text-sky-400 { color: #0284c7 !important; }
+.light-theme .text-purple-400 { color: #7e22ce !important; }
+.light-theme .text-emerald-400 { color: #059669 !important; }
+.light-theme .text-amber-400 { color: #b45309 !important; }
+
+.light-theme .bg-slate-950\/85 {
+  background-color: rgba(226, 232, 240, 0.72) !important;
+}
+
+.light-theme .hover\:bg-white\/\[0\.01\]:hover,
+.light-theme .hover\:bg-white\/\[0\.02\]:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Carbon Cutters ESG Portal",
+  "description": "An AI-enabled carbon footprint estimation and ESG compliance disclosure portal designed for MSME manufacturing industries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
