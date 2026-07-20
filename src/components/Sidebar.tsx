@@ -69,10 +69,7 @@ export default function Sidebar({
             <Shield className="h-5 w-5" />
           </div>
           {!collapsed && (
-            <div className="flex flex-col">
-              <span className="text-[10px] font-mono font-bold tracking-[0.25em] text-emerald-700">CARBON</span>
-              <span className="text-[10px] font-semibold tracking-[0.2em] text-slate-600">CUTTERS</span>
-            </div>
+            <span className="text-[10px] font-mono font-bold tracking-[0.16em] text-emerald-700 whitespace-nowrap">CARBON CUTTERS</span>
           )}
         </div>
       </div>

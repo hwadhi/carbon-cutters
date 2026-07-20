@@ -52,37 +52,37 @@ export default function Header({
   };
 
   return (
-    <header className="bg-white/85 border-b border-slate-200 px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 sticky top-0 backdrop-blur-md z-20">
+    <header className="bg-white/90 border-b border-slate-200 px-5 py-3 flex items-center gap-5 sticky top-0 backdrop-blur-md z-20">
       
       {/* Title block */}
-      <div className="flex items-center gap-3">
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2">
-            <h1 className="text-sm font-semibold tracking-wide text-slate-500">APEX PRECISION MANUFACTURING</h1>
+      <div className="flex items-center min-w-0 flex-1">
+        <div className="flex flex-col min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <h1 className="text-xs font-semibold tracking-wide text-slate-500 whitespace-nowrap">APEX PRECISION MFG.</h1>
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-            <span className="text-xs font-bold text-slate-800 tracking-wider font-display">CARBON CUTTERS ESG PLATFORM</span>
+            <span className="text-xs font-bold text-slate-800 tracking-wider font-display whitespace-nowrap">CARBON CUTTERS ESG</span>
           </div>
           <p className="text-[10px] text-slate-500 font-mono mt-0.5">LOCATION: INDUSTRIAL SECTOR-3 • CERTIFICATION ACTIVE</p>
         </div>
       </div>
 
       {/* Control Widgets */}
-      <div className="flex items-center flex-wrap gap-4 select-none">
+      <div className="flex items-center gap-2.5 shrink-0 select-none">
         
         {/* Digital UTC clock */}
-        <div className="hidden lg:flex items-center gap-2 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl font-mono text-[10px] text-slate-600">
+        <div className="hidden 2xl:flex items-center gap-2 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl font-mono text-[10px] text-slate-600 whitespace-nowrap">
           <Clock className="h-3.5 w-3.5 text-emerald-600" />
           <span>{currentTime || "CONNECTING..."}</span>
         </div>
 
         {/* Period selection indicator */}
-        <div className="bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl text-[10px] font-mono font-bold text-slate-600 flex items-center gap-2">
+        <div className="hidden xl:flex bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl text-[10px] font-mono font-bold text-slate-600 items-center gap-2 whitespace-nowrap">
           <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
           <span>PERIOD: <span className="text-emerald-600">FY 2026-27</span></span>
         </div>
 
         {/* AI Audit Status Indicator */}
-        <div className="flex items-center gap-2 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl">
+        <div className="hidden lg:flex items-center gap-2 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-xl whitespace-nowrap">
           <Sparkles className={`h-3.5 w-3.5 ${apiStatus.rateLimited ? "text-amber-500 animate-pulse" : "text-emerald-600"}`} />
           <span className="text-[10px] text-slate-600 font-mono">
             AUDIT CORE: <span className={`${apiStatus.rateLimited ? "text-amber-600" : "text-emerald-600"} font-semibold`}>
